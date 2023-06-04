@@ -25,11 +25,9 @@ class BST {
     }
     if (word < root->word) {
       root->left = addNode(root->left, word);
-    }
-    else if (word > root->word) {
+    } else if (word > root->word) {
       root->right = addNode(root->right, word);
-    }
-    else {
+    } else {
       root->count++;
     }
     return root;
@@ -40,8 +38,7 @@ class BST {
     }
     if (word < root->word) {
       return searchNode(root->left, word);
-    }
-    else {
+    } else {
       return searchNode(root->right, word);
     }
   }

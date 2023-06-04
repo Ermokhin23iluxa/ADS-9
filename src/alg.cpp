@@ -8,11 +8,11 @@
 BST<std::string> makeTree(const char* filename) {
   // поместите сюда свой код
   BST<std::string> tree;
-  std::ifstream file_name(filename);
+  std::ifstream file(filename);
   std::string first_line;
   std::string text;
   std::string addSymb;
-  while (std::getline(file_name, first_line)) {
+  while (std::getline(file, first_line)) {
     text = text + first_line + " ";
   }
   for (auto a : text) {
@@ -25,6 +25,6 @@ BST<std::string> makeTree(const char* filename) {
       addSymb = "";
     }
   }
-  file_name.close();
+  file.close();
   return tree;
 }

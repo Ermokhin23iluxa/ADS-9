@@ -20,11 +20,9 @@ class BST {
  private:
   Node * root;
   Node* addNode(Node* root, const std::string& word) {
-    if (root == nullptr) 
-    {
+    if (root == nullptr) {
       return new Node(word);
-    }
-    if (word < root->word) {
+    } if (word < root->word) {
       root->left = addNode(root->left, word);
     } else if (word > root->word) {
       root->right = addNode(root->right, word);
